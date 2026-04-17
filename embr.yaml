@@ -1,0 +1,12 @@
+platform: rust
+run:
+  port: 99999
+  startCommand: ./app
+healthCheck:
+  path: no-leading-slash
+  expectedStatusCode: 999
+cache:
+  enabled: true
+  mode: clustered
+  maxMemory: 0
+  evictionPolicy: random-garbage
